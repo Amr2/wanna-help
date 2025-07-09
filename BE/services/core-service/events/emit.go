@@ -2,7 +2,7 @@ package events
 
 import (
 	"context"
-	"core-service/structs"
+	"core-service/model"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -13,7 +13,7 @@ import (
 
 var ctx = context.Background()
 
-func EmitBidCreated(event structs.BidEvent) {
+func EmitBidCreated(event model.BidEvent) {
 	redisUrl := os.Getenv("REDIS_URL")
 	if redisUrl == "" {
 		redisUrl = "localhost:6379"

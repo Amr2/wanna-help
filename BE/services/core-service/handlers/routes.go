@@ -18,6 +18,8 @@ func RegisterRoutes(r *gin.Engine, db *sql.DB, redis *redis.Client) {
 	RegisterAgreementRoutes(r, db, redis)
 	// Rating routes
 	RegisterRatingRoutes(r, db, redis)
+	
+	// will be added later
 	// Payment routes (if needed)
 	// RegisterPaymentRoutes(r, db, redis)
 }

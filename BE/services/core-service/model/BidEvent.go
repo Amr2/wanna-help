@@ -1,4 +1,4 @@
-package structs
+package model
 
 type BidEvent struct {
 	RequestID  string  `json:"request_id"`

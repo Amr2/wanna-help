@@ -1,8 +1,8 @@
 package main
 
 import (
-	"core-service/db"
 	"core-service/handlers"
+	"core-service/repository"
 	"log"
 	"os"
 
@@ -11,8 +11,8 @@ import (
 
 func main() {
 	// Initialize DB and Redis
-	dbConn := db.InitPostgres()
-	redisClient := db.InitRedis()
+	redisClient := repository.InitRedis()
+	dbConn := repository.InitPostgres()
 
 	r := gin.Default()
 
