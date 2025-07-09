@@ -1,0 +1,10 @@
+{
+  "user_id": "uuid",
+  "type": "new_bid",
+  "payload": {
+    "request_id": "uuid",
+    "provider_id": "uuid"
+  },
+  "read": false,
+  "timestamp": "2024-01-01T12:00:00Z"
+}

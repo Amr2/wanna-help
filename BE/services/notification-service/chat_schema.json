@@ -1,0 +1,11 @@
+{
+  "chat_id": "uuid",
+  "participants": ["user1", "user2"],
+  "messages": [
+    {
+      "sender_id": "uuid",
+      "text": "hello",
+      "timestamp": "2024-01-01T12:00:00Z"
+    }
+  ]
+}

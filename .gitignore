@@ -1,0 +1,58 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/build/
+/bin/
+coverage.out
+# Go modules
+BE/services/core-service/go.sum
+
+# Node.js
+node_modules/
+UI/node_modules/
+UI/.next/
+UI/.env*
+
+# Python (if any)
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs
+*.log
+logs/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Env files
+.env
+.env.*
+BE/services/core-service/.env*
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Misc
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Ignore test output
+*.coverprofile
+*.testresult
+
+# Ignore docs build (if using Sphinx or similar)
+docs/_build/

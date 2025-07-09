@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "8080:3000"
+    env_file:
+      - ./services/api-gateway/.env
+    volumes:
+      - ./services/api-gateway:/app
+    networks:
+      - app-network
+
+  core-service:
+    build: ./services/core-service
+    ports:
+      - "8081:3000"
+    env_file:
+      - ./services/core-service/.env
+    volumes:
+      - ./services/core-service:/app
+    networks:
+      - app-network
+
+  chat-service:
+    build: ./services/chat-service
+    ports:
+      - "8082:3000"
+    env_file:
+      - ./services/chat-service/.env
+    volumes:
+      - ./services/chat-service:/app
+    networks:
+      - app-network
+
+  search-service:
+    build: ./services/search-service
+    ports:
+      - "8083:3000"
+    env_file:
+      - ./services/search-service/.env
+    volumes:
+      - ./services/search-service:/app
+    networks:
+      - app-network
+
+  notification-service:
+    build: ./services/notification-service
+    ports:
+      - "8084:3000"
+    env_file:
+      - ./services/notification-service/.env
+    volumes:
+      - ./services/notification-service:/app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: api-gateway
+    env: node
+    buildCommand: npm install
+    startCommand: npm run dev
+    plan: free
+    autoDeploy: true
+    repo: https://github.com/your-username/wanna-help
+    branch: main
+    rootDir: services/api-gateway
+
+  - type: web
+    name: core-service
+    env: docker
+    plan: free
+    autoDeploy: true
+    repo: https://github.com/your-username/wanna-help
+    branch: main
+    rootDir: services/core-service
+
+  - type: web
+    name: chat-service
+    env: node
+    buildCommand: npm install
+    startCommand: npm run dev
+    plan: free
+    autoDeploy: true
+    repo: https://github.com/your-username/wanna-help
+    branch: main
+    rootDir: services/chat-service
